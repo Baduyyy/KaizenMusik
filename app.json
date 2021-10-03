@@ -1,0 +1,88 @@
+{
+    "name": "zen Music Bot",
+    "logo": "https://telegra.ph/file/6447deaec9fc365cd6d1e.jpg",
+    "description": "zen Music allow you to stream music trought the telegram voice chat feature.",
+    "keywords": ["music", "voice chat", "telegram"],
+    "repository": "https://github.com/muhammadDimas12/ZenMusic",
+    "stack": "container",
+    "env": {
+        "SESSION_NAME": {
+            "description": "fill with the pyrogram session string",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "your bot token from @BotFather",
+            "required": true
+        },
+        "BOT_NAME": {
+            "description": "your music bot name.",
+            "required": false,
+            "value": ""
+        },
+        "BOT_USERNAME": {
+            "description": "fill with your bot username without @",
+            "required": true,
+            "value": "zenmusicbot"
+        },
+        "ASSISTANT_NAME": {
+            "description": "fill with the assistant username without @",
+            "required": true,
+            "value": "zenasisstant"
+        },
+        "BG_IMAGE": {
+            "description": "fill with your link costum background image",
+            "required": false,
+            "value": "https://telegra.ph/file/9261d704b3608f2882a88.png"
+        },
+        "THUMB_IMG": {
+            "description": "fill with costum thumbnail image it's different with bg_image",
+            "required": false,
+            "value": "https://telegra.ph/file/79d247eac00f3c9d2dfae.jpg"
+        },
+        "OWNER_NAME": {
+            "description": "fill with your username without @",
+            "required": false,
+            "value": "zaenmad"
+        },
+        "API_ID": {
+            "description": "your App ID from my.telegram.org/apps",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "your Api hash from my.telegram.org/apps",
+            "required": true
+        },
+        "SUDO_USERS": {
+            "description": "list id untuk daftar anggota sudo (pisahkan dengan spasi).",
+            "required": true
+        },
+        "DURATION_LIMIT": {
+            "description": "max durasi untuk video yang diunduh (dalam menit).",
+            "required": true,
+            "value": "60"
+        },
+        "PMPERMIT": {
+            "description": "pm-permit for assistant.",
+            "required": false,
+            "value": "ENABLE"
+        },
+        "UPDATES_CHANNEL": {
+            "description": "isi dengan username channel kamu, jika tidak punya lewati saja",
+            "required": false,
+            "value": "zen_update"
+        },
+        "GROUP_SUPPORT": {
+            "description": "isi dengan username grup kamu, jika tidak punya skip saja",
+            "required": false,
+            "value": "kaizensupport"
+        }
+    },
+    "buildpacks": [
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
